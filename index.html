@@ -25,18 +25,44 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     </head>
     <body class="login">
-        <header id="header" role="banner">
-        </header><!-- end header -->
-        <div class="wrapper clear">
-        	<aside class="left clear">
-
-            </aside>
-        	<section class="main left clear">
-               
+        <div class="wrapper">
+        	<section class="main">
+            	<img class="logo" src="img/login-logo.png" border="0" alt="FLYHT - The Future of Connectivity" />
+            	<div class="login-wrap clear">
+                	<div class="login-inner">
+                        <div id="loginDiv" class="left">
+                            <form target="serverMsg" action="j_security_check" method="post" name="loginForm" class="showLabels">
+                                <div class="relative">
+                                	<label for="j_username">User Name</label>
+                                	<input type="text" name="j_username" id="j_username">
+                                </div>
+                                <div class="relative">
+                                	<label for="j_password">Password</label>
+                                	<input type="password" name="j_password" id="j_password">
+                                </div>
+                                <ul class="actionMessage">
+                                    <li>You have provided an invalid User ID.</li>
+                                </ul>
+                                <input type="submit" value="Log In" name="submitButton">
+                            </form>
+                            <!--<a href="javascript:switchPane('forgotPassword');" class="internalLink">Forgot my Password</a> -->
+                            <a href="javascript:void(0);" onclick="jQuery('.login-inner').toggleClass('slide');" class="internalLink">Forgot my Password</a>
+                        </div><!-- end loginDiv -->
+                        <div id="forgotPasswordDiv" class="left">
+                        <form target="serverMsg" action="forget-password.do" method="post" name="forgotPasswordForm">
+                            <label for="forgotUserId">To have your password emailed to you, enter your User ID</label>
+                            <input type="text" name="userName" id="forgotUserId">
+                            <input type="submit" value="Submit" name="submit">
+                        </form>
+                        <!--<a href="javascript:switchPane('login');" class="internalLink">Back to Login</a>-->
+                        <a href="javascript:void(0);" onclick="jQuery('.login-inner').toggleClass('slide');" class="internalLink">Back to Login</a>
+                        </div><!-- end forgot password -->
+                    </div><!-- end login inner -->
+                </div><!-- end login wrap -->
         	</section><!-- end main -->
         </div><!-- end wrapper -->
 		<footer class="clear">
-
+			<div class="copyright">Copyright© 2014 <a href="#">FLYHT Aerospace Solutions Ltd</a>.</div>
         	<!-- Attach scripts -->
             <script src="js/scripts.js"></script>
             
