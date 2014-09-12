@@ -58,7 +58,7 @@
             
             <div class="header-actions right clear">
             	<a href="#" class="left"><i class="fa fa-question"></i>Support</a>
-            	<a href="#" class="left"><i class="fa fa-user"></i>Support</a>
+            	<a href="#" class="left"><i class="fa fa-user"></i>Account</a>
                 <div class="user-info left">
                 	<div class="user-id">ID:<span>Bartholomew</span></div>
                     <a href="#">Logout</a>
@@ -75,7 +75,7 @@
                     
                     
                         <td class="selection">
-                            <select name="selectedCompany" onchange="clearContent(parent.aircraft_sortCriteria);
+                            <select name="selectedCompany" onChange="clearContent(parent.aircraft_sortCriteria);
                                     updateAircraftBuilds(
                                     document.forms['compAircraftBuild'].elements['selectedCompany'],
                                     document.forms['compAircraftBuild'].elements['selectedAircraftBuild'],
@@ -95,7 +95,7 @@
                     </td>
                     
                     <td>
-                        <input name="search" class="submitBtn" style="margin: auto" onclick="resetAirport();updateFrame(parent.aircraft_sortCriteria,
+                        <input name="search" class="submitBtn" style="margin: auto" onClick="resetAirport();updateFrame(parent.aircraft_sortCriteria,
                                 document.forms['compAircraftBuild'].elements['selectedCompany_hidden'],
                                 document.forms['compAircraftBuild'].elements['selectedAircraftBuild']);
                                 return false;" value="Submit" type="submit">
@@ -281,7 +281,7 @@
                 
                 <table style="width: 100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>
                     <div class="buttonDiv">
-                        <input name="search0" value="Process" class="submitBtn" onclick="validateSearchForm(document.forms['compAircraft'], 'selectedAircraft')" type="button">
+                        <input name="search0" value="Process" class="submitBtn" onClick="validateSearchForm(document.forms['compAircraft'], 'selectedAircraft')" type="button">
                     </div>
                 </td></tr></tbody></table>
                 
