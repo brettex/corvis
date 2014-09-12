@@ -1,0 +1,310 @@
+<!doctype html>
+<html>
+    <head>
+        <title>UpTime - Home</title>
+        
+        <!-- meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=0.75, user-scalable=1, minimum-scale=0.5, maximum-scale=0.75">
+        
+        <!-- icons -->
+		<link href="img/favicon.ico" rel="shortcut icon">
+		<link href="img/touch.png" rel="apple-touch-icon-precomposed">
+		
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <!-- font awesome css -->
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
+		
+        <!-- load modernizr -->
+        <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <!-- load jQuery from Goolge CDN -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    </head>
+    <body class="report">
+    	<header id="header" role="banner" class="clear">
+        	<a href="home.html" class="logo left"><img src="img/logo.png" alt="FLYHT - Home" /></a>
+        	<ul id="global-nav" class="left">
+            	<li>
+                	<a href="#" class="hamburger"><i class="fa fa-navicon"></i>menu</a>
+                    <ul>
+                    	<li><a href="home.html" class="active link" title="Home">Home</a></li>
+                        <li>
+                        	<a href="#" class="no-link has-children" title="Application">Application</a>
+                            <ul>
+                            	<li><a href="#" class="link" title="Application 1">Application 1</a></li>
+                                <li><a href="#" class="link" title="Application 2">Application 2</a></li>
+                                <li><a href="#" class="link" title="Application 3">Application 3</a></li>
+                                <li><a href="#" class="link" title="Application 4">Application 4</a></li>
+                                <li><a href="#" class="link" title="Application 5">Application 5</a></li>
+                                <li><a href="#" class="link" title="Application 6">Application 6</a></li>
+                                <li><a href="#" class="link" title="Application 7">Application 7</a></li>
+                                <li><a href="#" class="link" title="Application 8">Application 8</a></li>
+                                <li><a href="#" class="link" title="Application 9">Application 9</a></li>
+                                <li><a href="#" class="link" title="Application 10">Application 10</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="utilities.html" class="link" title="Utilities">Utilities</a></li>
+                        <li><a href="csm.html" class="link" title="CSM">CSM</a></li>
+                    </ul>
+                </li>
+            </ul><!-- end global nav -->
+            <div id="contentTitle" class="left report-title">
+            	Rolls Royce RB211 Engine Profile
+            </div><!-- end report-title -->
+            
+            <div class="header-actions right clear">
+            	<a href="#" class="left"><i class="fa fa-question"></i>Support</a>
+            	<a href="#" class="left"><i class="fa fa-user"></i>Support</a>
+                <div class="user-info left">
+                	<div class="user-id">ID:<span>Bartholomew</span></div>
+                    <a href="#">Logout</a>
+                </div><!-- end user-info -->
+            </div><!-- end header actions -->
+        </header>
+        <div class="wrapper">
+        	<section class="main">
+            <!-- Copy and pasted code from live site -->
+                <form name="compAircraftBuild" class="compAircraftBuild" action="" style="margin-bottom: 0">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                    <td class="label">Company</td>
+                    
+                    
+                        <td class="selection">
+                            <select name="selectedCompany" onchange="clearContent(parent.aircraft_sortCriteria);
+                                    updateAircraftBuilds(
+                                    document.forms['compAircraftBuild'].elements['selectedCompany'],
+                                    document.forms['compAircraftBuild'].elements['selectedAircraftBuild'],
+                                    document.forms['compAircraftBuild'].elements['selectedCompany_hidden'])"><option value="56" selected="selected">National Airlines</option>
+        <option value="17">North American</option>
+        <option value="10">Omni Air</option>
+        <option value="16">Skyservice</option></select>
+                        </td>
+                    
+                    
+                    
+                    <td class="label">A/C Type</td>
+                    
+                    <td class="selection">
+                        <select name="selectedAircraftBuild"><option value="All">All</option>
+        <option value="6">Boeing 757-200</option></select>
+                    </td>
+                    
+                    <td>
+                        <input name="search" class="submitBtn" style="margin: auto" onclick="resetAirport();updateFrame(parent.aircraft_sortCriteria,
+                                document.forms['compAircraftBuild'].elements['selectedCompany_hidden'],
+                                document.forms['compAircraftBuild'].elements['selectedAircraftBuild']);
+                                return false;" value="Submit" type="submit">
+                    </td>
+                </tr>
+            </tbody></table>
+            <input name="selectedCompany_hidden" value="56" type="hidden">
+        </form>
+        
+        <div style="position: relative">
+            <table id="opt" style="position: absolute; right: 0; visibility: hidden">
+                <tbody><tr>
+                    
+                    <td><a href="javascript:getCSV();">Export to CSV</a></td>
+                    <td>|</td>
+                    <td><a href="javascript:refreshRecords();">Refresh</a></td>
+                    <input name="aFFID" id="aFFID" type="Hidden">
+                </tr>
+            </tbody></table>
+        </div>
+        
+ 
+
+            <form name="compAircraft">
+                <table id="AircraftTable" class="content" style="width: 100%; text-align: center" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr class="rowHeader">
+                        <td width="1%"></td>
+                         
+                            <td width="12%">
+                                Registration
+                            </td>
+                         
+                            <td width="12%">
+                                Phone No.
+                            </td>
+                         
+                            <td width="12%">
+                                Aircraft Type
+                            </td>
+                         
+                            <td width="12%">
+                                Aircraft S/N
+                            </td>
+                         
+                            <td width="12%">
+                                AFIRS S/N
+                            </td>
+                         
+                            <td width="12%">
+                                Firmware Version
+                            </td>
+                         
+                            <td width="12%">
+                                Rules Version
+                            </td>
+                         
+                            <td width="12%">
+                                Data Last Received
+                            </td>
+                            
+                    </tr>
+                    
+                      
+                        
+                        <tr class="altLight">
+                            <td style="text-align: left">
+                                
+                                
+                                    
+                                        <input name="selectedAircraft" value="112" type="checkbox">			
+                                    
+                                    
+                                
+                            </td>
+                             
+                                <td style="width: 12%">
+                                
+                                N176CA</td>
+                             
+                                <td style="width: 12%">
+                                
+                                881621459654</td>
+                             
+                                <td style="width: 12%">
+                                
+                                Boeing 757-200</td>
+                             
+                                <td style="width: 12%">
+                                
+                                24543</td>
+                             
+                                <td style="width: 12%">
+                                
+                                8</td>
+                             
+                                <td style="width: 12%">
+                                
+                                200v054</td>
+                             
+                                <td style="width: 12%">
+                                
+                                001v003</td>
+                             
+                                <td style="width: 12%">
+                                
+                                2014-09-12 05:28:22</td>
+                             
+                        </tr> 
+                     
+                </tbody></table>
+                
+                <table id="SelectionTable" style="width: 100%; font-size: smaller" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr>
+                        <td>
+                            
+                                
+                                        <a href="javascript:setAll(document.forms['compAircraft'], 'selectedAircraft', 1)">
+                                            Select All</a>
+                                        /
+                                        <a href="javascript:setAll(document.forms['compAircraft'], 'selectedAircraft', 0)">
+                                            Deselect All</a>
+                                
+                                
+                            
+                        </td>	
+                    </tr>
+                </tbody></table>
+                <br>
+                
+                <table id="CalenderTable" class="CalenderTable" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr>
+                        <td>
+                            Start Date:&nbsp;<input id="data1" name="reportStartDate" readonly="readonly" value="09-12-2014" type="text">
+                            <input class="calendarBtn" id="trigger1" value="..." type="button">
+                            UTC
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                
+                            End Date:&nbsp;<input id="data2" name="reportEndDate" readonly="readonly" value="09-12-2014" type="text">
+                            <input class="calendarBtn" id="trigger2" value="..." type="button">
+                            UTC
+                        </td>
+                    </tr>
+                </tbody></table>
+                <br>
+                
+                <table class="sortParameter" style="width: 100%" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr><td colspan="4" style="padding-bottom: 0.25em">Sort Criteria</td></tr>
+                    <tr>
+                        <td style="width: 25%">
+                            1:
+                            <select name="sortByFirst"><option value="All">Select</option>
+            <option value="RR_RB211_ENGINE_PROFILE_56.REGISTRATION">Registration</option>
+            <option value="RR_RB211_ENGINE_PROFILE_56.MSGSTART_TIMESTAMP">Flight Date</option>
+            <option value="RR_RB211_ENGINE_PROFILE_56.DEPART_AIRPORT">From</option>
+            <option value="RR_RB211_ENGINE_PROFILE_56.ARRIVAL_AIRPORT">To</option></select>
+                        </td>
+                        <td style="width: 25%">
+                            2:
+                            <select name="sortBySecond"><option value="All">Select</option>
+            <option value="RR_RB211_ENGINE_PROFILE_56.REGISTRATION">Registration</option>
+            <option value="RR_RB211_ENGINE_PROFILE_56.MSGSTART_TIMESTAMP">Flight Date</option>
+            <option value="RR_RB211_ENGINE_PROFILE_56.DEPART_AIRPORT">From</option>
+            <option value="RR_RB211_ENGINE_PROFILE_56.ARRIVAL_AIRPORT">To</option></select>
+                        </td>
+                        <td style="width: 25%">
+                            3:
+                            <select name="sortByThird"><option value="All">Select</option>
+            <option value="RR_RB211_ENGINE_PROFILE_56.REGISTRATION">Registration</option>
+            <option value="RR_RB211_ENGINE_PROFILE_56.MSGSTART_TIMESTAMP">Flight Date</option>
+            <option value="RR_RB211_ENGINE_PROFILE_56.DEPART_AIRPORT">From</option>
+            <option value="RR_RB211_ENGINE_PROFILE_56.ARRIVAL_AIRPORT">To</option></select>
+                        </td>
+                        <td style="width: 25%">
+                            4:
+                            <select name="sortByForth"><option value="All">Select</option>
+            <option value="RR_RB211_ENGINE_PROFILE_56.REGISTRATION">Registration</option>
+            <option value="RR_RB211_ENGINE_PROFILE_56.MSGSTART_TIMESTAMP">Flight Date</option>
+            <option value="RR_RB211_ENGINE_PROFILE_56.DEPART_AIRPORT">From</option>
+            <option value="RR_RB211_ENGINE_PROFILE_56.ARRIVAL_AIRPORT">To</option></select>
+                        </td>
+                    </tr>
+                </tbody></table>
+                <br>
+                
+                <table style="width: 100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>
+                    <div class="buttonDiv">
+                        <input name="search0" value="Process" class="submitBtn" onclick="validateSearchForm(document.forms['compAircraft'], 'selectedAircraft')" type="button">
+                    </div>
+                </td></tr></tbody></table>
+                
+                <!-- scripts used to populate fields with the selected dates when submitting a request for a report -->		
+                <input name="company" value="56" type="hidden"> 
+            </form>
+            <!-- end copied code -->
+            	
+        	</section><!-- end main -->
+        </div><!-- end wrapper -->
+		<footer class="clear">
+        	<!-- Attach scripts -->
+            <script src="js/scripts.js"></script>
+            <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+            
+            <script>
+            $(document).ready(function () {
+				//Initate the jQuery UI Menu
+				$("#global-nav").menu({ position: { my: "left bottom", at: "left+40 top" } });
+				
+			});
+        	</script>
+
+        </footer><!-- end footer -->
+    </body>
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+    <head>
+        <title>UpTime - Home</title>
+        
+        <!-- meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=0.75, user-scalable=1, minimum-scale=0.5, maximum-scale=0.75">
+        
+        <!-- icons -->
+		<link href="img/favicon.ico" rel="shortcut icon">
+		<link href="img/touch.png" rel="apple-touch-icon-precomposed">
+		
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <!-- font awesome css -->
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
+		
+        <!-- load modernizr -->
+        <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <!-- load jQuery from Goolge CDN -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    </head>
+    <body class="home">
+    	<header id="header" role="banner" class="clear">
+        	<a href="home.html" class="logo left"><img src="img/logo.png" alt="FLYHT - Home" /></a>
+        	<ul id="global-nav" class="left">
+            	<li>
+                	<a href="#" class="hamburger"><i class="fa fa-navicon"></i>menu</a>
+                    <ul>
+                    	<li><a href="home.html" class="active link" title="Home">Home</a></li>
+                        <li>
+                        	<a href="#" class="no-link has-children" title="Application">Application</a>
+                            <ul>
+                            	<li><a href="#" class="link" title="Application 1">Application 1</a></li>
+                                <li><a href="#" class="link disabled" title="Application 2">Application 2</a></li>
+                                <li><a href="#" class="link" title="Application 3">Application 3</a></li>
+                                <li><a href="#" class="link" title="Application 4">Application 4</a></li>
+                                <li><a href="#" class="link" title="Application 5">Application 5</a></li>
+                                <li><a href="#" class="link" title="Application 6">Application 6</a></li>
+                                <li><a href="#" class="link" title="Application 7">Application 7</a></li>
+                                <li><a href="#" class="link" title="Application 8">Application 8</a></li>
+                                <li><a href="#" class="link" title="Application 9">Application 9</a></li>
+                                <li><a href="#" class="link" title="Application 10">Application 10</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="utilities.html" class="link" title="Utilities">Utilities</a></li>
+                        <li><a href="csm.html" class="link" title="CSM">CSM</a></li>
+                    </ul>
+                </li>
+            </ul><!-- end global nav -->
+            
+            <div class="header-actions right clear">
+            	<a href="#" class="left"><i class="fa fa-question"></i>Support</a>
+            	<a href="#" class="left"><i class="fa fa-user"></i>Support</a>
+                <div class="user-info left">
+                	<div class="user-id">ID:<span>Bartholomew</span></div>
+                    <a href="#">Logout</a>
+                </div><!-- end user-info -->
+            </div><!-- end header actions -->
+        </header>
+        <div class="wrapper">
+        	<section class="main">
+            	<div class="hero">
+                	<img src="img/hero.jpg" border="0" alt="UpTime" width="100%" />
+                </div>
+                <div class="applications clear">
+                	<div class="block left">
+                    	<a href="#">
+                        	<img src="img/following.jpg" alt="Application 1" />
+                            <h3>FLYHT Following</h3>
+                        </a>
+                    </div><!-- end block -->
+                    <div class="block disabled left">
+                    	<a href="#">
+                        	<img src="img/fuel.jpg" alt="Application 2" />
+                            <div class="message">
+                            	CALL YOUR ACCOUNT DIRECTOR TO ACTIVATE
+                            </div><!--end message -->
+                            <h3>FLYHT Fuel</h3>
+                        </a>
+                    </div><!-- end block -->
+                    <div class="block left">
+                    	<a href="#">
+                        	<img src="img/mail.jpg" alt="Application 3" />
+                            <h3>FLYHT Mail</h3>
+                        </a>
+                    </div><!-- end block -->
+                    <div class="block left">
+                    	<a href="#">
+                        	<img src="img/safe.jpg" alt="Application 4" />
+                            <h3>FLYHT Safe</h3>
+                        </a>
+                    </div><!-- end block -->
+                    <div class="block left">
+                    	<a href="#">
+                        	<img src="img/stream.jpg" alt="Application 5" />
+                            <h3>FLYHT Stream</h3>
+                        </a>
+                    </div><!-- end block -->
+                    <div class="block left">
+                    	<a href="#">
+                        	<img src="img/health.jpg" alt="Application 6" />
+                            <h3>FLYHT Aircraft Health Monitoring</h3>
+                        </a>
+                    </div><!-- end block -->
+                    <div class="block left">
+                    	<a href="#">
+                        	<img src="img/reports.jpg" alt="Application 7" />
+                            <h3>FLYHT Reports</h3>
+                        </a>
+                    </div><!-- end block -->
+                    <div class="block left">
+                    	<a href="#">
+                        	<img src="img/billing.jpg" alt="Application 8" />
+                            <h3>FLYHT Billing</h3>
+                        </a>
+                    </div><!-- end block -->
+                </div><!-- end applications -->
+        	</section><!-- end main -->
+        </div><!-- end wrapper -->
+		<footer class="clear">
+        	<!-- Attach scripts -->
+            <script src="js/scripts.js"></script>
+            <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+            
+            <script>
+            $(document).ready(function () {
+				//Initate the jQuery UI Menu
+				$("#global-nav").menu({ position: { my: "left bottom", at: "left+40 top" } });
+				
+			});
+        	</script>
+
+        </footer><!-- end footer -->
+    </body>
+</html>

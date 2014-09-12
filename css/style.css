@@ -90,7 +90,8 @@ p{}
 
 /* Headings */
 h1, h2, h3, h4, h5, h6, h7 {
-
+	margin:0;
+	padding:0;
 }
 
 body{
@@ -132,6 +133,7 @@ body{
 	text-align:center;
 	font-weight:bold;
 	font-size:12px;
+	padding-bottom:50px;
 }
 
 .login .logo{
@@ -185,6 +187,306 @@ body{
     HEADER
 \*------------------------------------*/
 
+header{
+	height:51px;
+	width:100%;
+	left:0px;
+	top:0px;
+	margin:0px;
+	padding:0 90px 0 121px;
+	border:0px;
+	-moz-box-sizing:border-box;
+	-webkit-transition:all 0.6s ease-in-out 0.0s;
+	   -moz-transition:all 0.6s ease-in-out 0.0s;
+	    -ms-transition:all 0.6s ease-in-out 0.0s;
+	     -o-transition:all 0.6s ease-in-out 0.0s;
+	        transition:all 0.6s ease-in-out 0.0s;
+}
+
+header:before {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("../img/global-before-bg.png");
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    content: "";
+    display: block;
+    height: 100px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 121px;
+	-webkit-transition:all 0.6s ease-in-out 0.0s;
+	   -moz-transition:all 0.6s ease-in-out 0.0s;
+	    -ms-transition:all 0.6s ease-in-out 0.0s;
+	     -o-transition:all 0.6s ease-in-out 0.0s;
+	        transition:all 0.6s ease-in-out 0.0s;
+}
+
+header:after {
+    background: url("../img/global-shadow-bg.png") repeat-x scroll 0 bottom padding-box content-box transparent;
+    box-sizing: border-box;
+    display: block;
+    height: 9px;
+    left: 121px;
+    position: absolute;
+    top: 50px;
+    width: calc(100% - 121px);
+    z-index: 10;
+}
+
+header .logo{
+	position:absolute;
+	left:10px;
+	top:5px;
+}
+/* Global Nav */
+
+#global-nav > li > a,
+.header-actions a
+{
+	color:#34495e;
+	margin:5px 0 0 40px;
+	text-transform:uppercase;
+	font-size:10px;
+	font-weight:bold;
+	text-align:center;
+	display:block;
+}
+
+.header-actions a{
+	margin:7px 20px 0 0;
+}
+
+#global-nav > li > a > i, 
+.header-actions a i{
+	font-size:24px;
+	display:block;
+}
+
+.user-info{
+	margin-top:10px;
+	font-size:10px;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+#global-nav > li > a:hover,
+.header-actions a:hover{
+	color:#008ed8;
+}
+
+.user-info a{
+	color:#008ed8;
+	text-align:left;
+	line-height:16px;
+}
+
+.user-info a:hover{
+	color:#34495e;
+}
+
+#global-nav li{
+	position:relative;
+}
+
+#global-nav li li{
+	position:static;
+}
+
+#global-nav li ul{
+	position:absolute;
+	top:47px !important;
+	left:24px !important;
+	border:0px solid transparent;
+	font-size:12px;
+	color:#fff;
+	background:#2c3e50;
+	padding: 0px 0;
+	text-indent:0px;
+	z-index:10;
+	display:block;
+	font-family:"Lato";
+	text-indent:10px;
+	padding:6px 0;
+	border-radius:6px;
+	outline:none;
+	width:auto;
+	padding:5px 3px;
+}
+
+#global-nav li ul ul{
+	top:0px !important;
+	left:100% !important;
+}
+
+#global-nav li ul:before{
+
+}
+
+#global-nav li ul a{
+	height:26px;
+	line-height:26px;
+	color:#fff;
+	display:block;
+	min-width:145px;
+	white-space:nowrap; 
+	border-radius:2px; 
+	position:relative;
+	margin-bottom:2px;
+}
+
+#global-nav li ul a.disabled, #global-nav li ul a.disabled:hover{
+	opacity:0.3;
+	cursor:default;
+	background:none;
+}
+
+#global-nav li ul li:hover > a, #global-nav li ul a.active{
+	background:#008ed8;
+}
+
+#global-nav li ul a.has-children.active:before, #global-nav li ul li:hover a.has-children:before{
+	content:'\f054';
+	display:inline-block;
+	font-family:"FontAwesome";
+	font-size:12px;
+	position:absolute;
+	top:1px;
+	right:10px;
+	font-weight:100;
+}
+
+/* Triangle Pointer */
+#global-nav > li > ul:before{
+	display:block;
+	height:0px;
+	width:0px;
+	border:10px solid transparent;
+	border-bottom-color:#2c3e50;
+	content:' ';
+	position:absolute;
+	left:20px;
+	top:-20px;	
+}
+
+
+/*------------------------------------*\
+    HOME PAGE STYLES
+\*------------------------------------*/
+
+.applications{
+	padding:20px 0;
+    display: inline-flex;
+    flex-flow: row wrap;
+	align-items: stretch;
+    justify-content: center;
+}
+
+.applications .block{
+	margin:0 20px 20px 0;
+	max-width:305px;
+	width:22%;
+	min-width:125px;
+	position:relative;
+	-webkit-transition: all 0.5s ease-in-out;
+       -moz-transition: all 0.5s ease-in-out;
+	    -ms-transition: all 0.5s ease-in-out;
+	     -o-transition: all 0.5s ease-in-out;
+		    transition: all 0.5s ease-in-out;
+}
+
+.applications .block a{
+	display:block;
+}
+
+.applications .block a h3{
+	color:#34495e;
+	font-weight:bold;
+	font-size:16px;
+	line-height:normal;
+	padding:10px 0 0 15px;
+}
+
+.applications .block a:hover h3{
+	color:#008ed8;
+}
+
+.applications .block a:hover img{
+	opacity:0.5;
+}
+
+/* Disabled States */
+.applications .block.disabled img{
+	opacity:0.3;
+}
+
+.applications .block.disabled a{
+	cursor:default;
+}
+
+.applications .block.disabled h3{
+	color:#ccc;
+}
+
+.applications .block .message{
+	position:absolute;
+	text-align:center;
+	width:100%;
+	bottom:50px;
+	left:0;
+	color:#fff;
+	font-weight:bold;
+	font-size:18px;
+	line-height:24px;
+}
+
+/*------------------------------------*\
+    REPORT STYLES
+\*------------------------------------*/
+
+body.report{
+	background: url('../img/report-bg.png') left top repeat-x #fff;	
+}
+
+.report header{
+	padding-left:0;
+	margin-left:121px;
+	width:calc(100% - 121px);
+}
+
+.report header:before{
+	background:url("../img/report-before-bg.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.report header:after{ 
+	background: url("../img/global-shadow-bg.png") repeat-x scroll 0 bottom padding-box content-box transparent;
+    box-sizing: border-box;
+    display: block;
+    height: 59px;
+    left: 121px;
+    position: absolute;
+    top: 0;
+    width: calc(100% - 121px);
+    z-index: -1;
+}
+
+.report-title{
+	color:#404041;
+	font-size:20px;
+	padding-left:30px;
+	margin:5px 0 0 30px;
+	height:36px;
+	line-height:36px;
+	border-left:2px solid #c9d0d5;
+}
+
+.report .main{
+	padding:30px;
+}
 
 /*------------------------------------*\
     FORM ELEMENTS
@@ -330,33 +632,44 @@ input[type="button"]:disabled, input[type="submit"]:disabled{
     RESPONSIVE
 \*------------------------------------*/
 
-@media only screen and (min-width:320px) {
-
+@media only screen and (max-width:920px) {
+.report-title{
+	font-size:14px;
 }
-@media only screen and (min-width:480px) {
 
-}
+
+
 @media only screen and (max-width:850px) {
 .login section.main{
 	float:none;
 	margin:0 auto;
 }
-
-}
-@media only screen and (min-width:1024px) {
-
-}
-@media only screen and (min-width:1140px) {
-
-}
-@media only screen and (min-width:1280px) {
-
-}
-@media only screen and (-webkit-min-device-pixel-ratio:1.5),
-	   only screen and (min-resolution:144dpi) {
-
+.applications .block .message{
+	font-size:14px;
+	line-height:16px
 }
 
+.report header{
+	padding:0 20px 0 0;
+}
+
+.report-title{
+	width:30%;
+	overflow:hidden;
+}
+
+}
+
+@media only screen and (max-width:640px) {
+header{
+	padding:0 20px 0 121px;
+}
+
+.applications .block .message{
+	font-size:12px;
+}
+
+}
 /*------------------------------------*\
     PRINT
 \*------------------------------------*/
