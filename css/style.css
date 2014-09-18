@@ -410,6 +410,7 @@ header .logo{
     flex-flow: row wrap;
 	align-items: stretch;
     justify-content: center;
+	width:100%;
 }
 
 .applications .block{
